@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FenTrue.Views.AddPocketWindowView">
+
+ <!--*******************Overall StackView Begin***********************-->
+    
+    <StackLayout BackgroundColor="#3D3D3D">
+
+    <!--****************Begin Header*******************-->
+        <BoxView Margin="0,50,0,0" HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <Label Text="Add Pocket Window"
+               TextColor="White"
+               FontSize="Title"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+        <StackLayout Orientation="Horizontal" Padding="5,0,5,0">
+            <Label Text="900900"
+                   x:Name="ProjectNumber"
+                   TextColor="White"
+                   HorizontalTextAlignment="Start"
+                   HorizontalOptions="StartAndExpand"/>
+            <Label Text="Last Name"
+                   x:Name="LastName"
+                   HorizontalTextAlignment="End"
+                   TextColor="White"/>
+        </StackLayout>
+        <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <Label Text="Window Specifications:"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand"/>
+        <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--****************Header Ends**************************-->
+
+    <!--*************Begin ScrollView for Data Entry*****************-->
+        <StackLayout>
+        <ScrollView Padding="0,10,0,0">
+
+            <!--ScrollView StackLayout Begin-->
+            <StackLayout>
+                <!--Room Location Grid Stack Begin-->
+                <Grid RowSpacing="0">
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Room Location:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="RoomLocationPicker"
+                            Title="Select Room"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>Living Room</x:String>
+                            <x:String>Kitchen</x:String>
+                            <x:String>Bedroom</x:String>
+                            <x:String>Bathroom</x:String>
+                            <x:String>Office</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    </StackLayout>
+                <!--Room Location Grid Stack End-->
+                <!--Total Units Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Total Units:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker BackgroundColor="#3D3D3D"
+                                Title="Select"
+                                TitleColor="White"
+                                x:Name="TotalUnitsPicker"
+                                TextColor="White">
+                            <Picker.Items>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                <!--Total Units Grid Stack End-->
+
+                <!--Total Openings Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Total Openings:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker BackgroundColor="#3D3D3D"
+                                Title="Select"
+                                TitleColor="White"
+                                x:Name="TotalOpeningsPicker"
+                                TextColor="White">
+                            <Picker.Items>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                <!--Total Openings Grid Stack End-->
+
+                <!--Brand Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="3"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Brand:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker BackgroundColor="#3D3D3D"
+                                x:Name="BrandPicker"
+                                Title="Select Brand"
+                                TitleColor="White"
+                                TextColor="White">
+                            <Picker.Items>
+                                <x:String>Sunrise Essentials</x:String>
+                                <x:String>Sunrise Restorations</x:String>
+                                <x:String>Sunrise Sunrise</x:String>
+                                <x:String>Marvin Essentials</x:String>
+                                <x:String>Marvin Ultimate Clad</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                <!--Brand Grid Stack End-->
+
+                <!--Window Style Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="4"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Window Style:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="WindowStylePicker"
+                            Title="Select Style"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>Double Hung</x:String>
+                            <x:String>Picture</x:String>
+                            <x:String>LH Casement</x:String>
+                            <x:String>RH Casement</x:String>
+                            <x:String>Circle Top</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    </StackLayout>
+                <!--Window Style Grid Stack End-->
+
+                <!--Install Type Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="5"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Install Type:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Label BackgroundColor="#3D3D3D"
+                               VerticalTextAlignment="Center"
+                               Padding="0,0,5,0"
+                               x:Name="InstallTypePocket"
+                               Text="Pocket"
+                               TextColor="White">
+                        </Label>
+                    </StackLayout>
+                <!--Install Type Grid Stack End-->
+
+                <!--Removal Type Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="6"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Removal Type:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker BackgroundColor="#3D3D3D"
+                                Title="Select Removal"
+                                TitleColor="White"
+                                x:Name="RemovalTypePicker"
+                                TextColor="White">
+                            <Picker.Items>
+                                <x:String>Wood Out</x:String>
+                                <x:String>Metal Out</x:String>
+                                <x:String>Vinyl Out</x:String>
+                                <x:String>Glass Only</x:String>
+                                <x:String>New Construction</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                <!--Removal Type Grid Stack Ends-->
+                </Grid>
+                <!--Window Specifications Grid Stack End-->
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--********Window Specification Section End********************-->
+
+    <!--********Window Measurements Grid Stack Begin*****************-->
+                <Label Text="Measurements"
+                       TextColor="White"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <!--Measurement Grid Stack Begin-->
+                <Grid RowSpacing="0">
+                    <!--Jamb Width Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Jamb Width:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="JambWidthPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>24</x:String>
+                            <x:String>28</x:String>
+                            <x:String>32</x:String>
+                            <x:String>36</x:String>
+                            <x:String>48</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        <Picker x:Name="JambWidthFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Jamb Width Grid Stack End-->
+
+                    <!--Jamb Height Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Jamb Height:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="JambHeightPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>38</x:String>
+                            <x:String>46</x:String>
+                            <x:String>54</x:String>
+                            <x:String>62</x:String>
+                            <x:String>74</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        <Picker x:Name="JambHeightFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Jamb Height Grid Stack End-->
+
+                    <!--Width Setback Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Width Setback:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        
+                        <Picker x:Name="WidthSetbackFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Width Setback Grid Stack End-->
+
+                    <!--Height Setback Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="3"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Height Setback:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        
+                        <Picker x:Name="HeightSetbackFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Jamb Width Grid Stack End-->
+
+                    <!--Order Width Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="4"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Order Width:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="OrderWidthPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>24</x:String>
+                            <x:String>28</x:String>
+                            <x:String>32</x:String>
+                            <x:String>36</x:String>
+                            <x:String>48</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        <Picker x:Name="OrderWidthFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Order Width Grid Stack End-->
+
+                    <!--Order Height Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="5"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Order Height:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="OrderHeightPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>38</x:String>
+                            <x:String>46</x:String>
+                            <x:String>54</x:String>
+                            <x:String>62</x:String>
+                            <x:String>74</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        <Picker x:Name="OrderHeightFractionPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>0/0</x:String>
+                            <x:String>1/8</x:String>
+                            <x:String>1/4</x:String>
+                            <x:String>3/8</x:String>
+                            <x:String>1/2</x:String>
+                            <x:String>5/8</x:String>
+                            <x:String>3/4</x:String>
+                            <x:String>7/8</x:String>
+                        </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <!--Order Height Grid Stack End-->
+                </Grid>
+                <!--Measurements Grid Stack End-->
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+
+    <!--********Window Measurements Grid Stack End*****************-->
+
+                <!--Details Section Begin-->
+                <Label Text="Details"
+                       TextColor="White"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Grid RowSpacing="0">
+                    <!--Grid Pattern Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Grid Pattern:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="GridPatternPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>None</x:String>
+                            <x:String>1V/2H</x:String>
+                            <x:String>2V/2H</x:String>
+                            <x:String>3V/2H</x:String>
+                            <x:String>3V/3H</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        
+                    </StackLayout>
+                    <!--Grid Pattern Grid Stack End-->
+
+                    <!--Lead Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Lead:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="LeadPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>No</x:String>
+                            <x:String>Yes</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        
+                    </StackLayout>
+                    <!--Lead Grid Stack End-->
+
+                    <!--Cladding Color Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Cladding Color:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="CladColorPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>None</x:String>
+                            <x:String>White</x:String>
+                            <x:String>Beige</x:String>
+                            <x:String>Brown</x:String>
+                            <x:String>Bronze</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Cladding Color Grid Stack End-->
+                </Grid>
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--*********************Details Section End***********************-->
+
+
+    <!--*********************Interior Details Section Begin***********************-->
+                <Label Text="Interior Details"
+                       TextColor="White"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Grid RowSpacing="0">
+                    <!--Interior Casing Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Interior Casing:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="InteriorCasingPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>None</x:String>
+                            <x:String>356 Colonial</x:String>
+                            <x:String>366 Colonial</x:String>
+                            <x:String>RB3</x:String>
+                            <x:String>Backband</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Interior Casing Grid Stack End-->
+
+                    <!--Interior Casing Color Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Casing Color:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="InteriorCasingColorPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>White</x:String>
+                            <x:String>Dark Stain</x:String>
+                            <x:String>Medium Stain</x:String>
+                            <x:String>Light Stain</x:String>
+                            <x:String>Custom</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Interior Casing Color Stack End-->
+
+                    <!--Interior Casing Style Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Interior Casing:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="InteriorCasingStylePicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>Stool and Apron</x:String>
+                            <x:String>Picture Frame</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Interior Casing Style Grid Stack End-->
+                </Grid>
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--*********************Interior Details Section End***********************-->
+
+
+    <!--*********************Exterior Details Section Begin***********************-->
+                <Label Text="Exterior Details"
+                       TextColor="White"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Grid RowSpacing="0">
+                    <!--Exterior Casing Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Exterior Casing:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="ExteriorCasingPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>None</x:String>
+                            <x:String>Brickmold</x:String>
+                            <x:String>Backband</x:String>
+                            <x:String>1x4</x:String>
+                            <x:String>2x4</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Exterior Casing Grid Stack End-->
+
+                    <!--Interior Casing Color Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Casing Color:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="ExteriorCasingColorPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>White</x:String>
+                            <x:String>Beige</x:String>
+                            <x:String>Parchment</x:String>
+                            <x:String>Bronze</x:String>
+                            <x:String>Brown</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Exterior Casing Color Stack End-->
+
+                    <!--Exterior Covering Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Exterior Covering:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="ExteriorCoveringPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>Siding</x:String>
+                            <x:String>Brick</x:String>
+                            <x:String>Stucco</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Interior Casing Style Grid Stack End-->
+                </Grid>
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--*********************Exterior Details Section End***********************-->
+
+
+    <!--*********************Repair/Replace Section Begin***********************-->
+                <Label Text="Repair/Replace"
+                       TextColor="White"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Grid RowSpacing="0">
+                    <!--Replace Sill and Nose Grid Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="0"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Replace Sill and Nose:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="SillReplacePicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>No</x:String>
+                            <x:String>Yes</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Replace Sill and Nose Grid Stack End-->
+
+                    <!--Replace Nose only Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Nose Only:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="ReplaceNoseOnlyPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>No</x:String>
+                            <x:String>Yes</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--REplace Nose Only Stack End-->
+
+                    <!--Replace exterior casing Stack Begin-->
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5,0,5,0"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Replace Exterior Casing:"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Picker x:Name="ReplaceExteriorCasingPicker"
+                            Title="Select"   
+                            TitleColor="White"
+                            HorizontalOptions="End"
+                            TextColor="White"
+                            BackgroundColor="#3D3D3D">
+                        <Picker.Items>
+                            <x:String>None</x:String>
+                            <x:String>All</x:String>
+                            <x:String>Full One Side</x:String>
+                            <x:String>Full Both Sides</x:String>
+                            <x:String>Partial One Side</x:String>
+                            <x:String>Partial Both Sides</x:String>
+                            <x:String>Top Only</x:String>
+                        </Picker.Items>
+                        </Picker>    
+                    </StackLayout>
+                    <!--Replace Exteiror Casing Grid Stack End-->
+                </Grid>
+                <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+    <!--*********************Repair/Replace Details Section End***********************-->
+
+
+    <!--*********************Notes Section Begin***********************-->
+                <StackLayout>
+
+                    <Label Text="Notes"
+                        TextColor="White"
+                        HorizontalOptions="CenterAndExpand"/>
+                    <Editor HeightRequest="250"
+                            VerticalOptions="FillAndExpand"
+                            TextColor="White"
+                            Placeholder="Description"
+                            PlaceholderColor="#BBBBBB"
+                            BackgroundColor="#3D3D3D"/>
+                    <BoxView HeightRequest="1"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Start"
+                             BackgroundColor="#BBBBBB"/>
+                   
+                        <Button Text="Add Another Window"
+                            TextColor="White"
+                            x:Name="AddWindowButton"
+                            FontSize="Medium"
+                            Padding="10"
+                            Margin="10"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                    <BoxView HeightRequest="1"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Start"
+                             BackgroundColor="#BBBBBB"/>
+                </StackLayout>
+                
+    <!--*********************Notes Section End***********************-->
+
+
+    <!--*********************Images Section Begin***********************-->
+
+    <!--*********************Images Section End***********************-->
+
+
+
+            </StackLayout>
+            <!--End Scrollview Stacklayout-->
+        </ScrollView>
+        </StackLayout>
+        <!--End Data Entry ScrollView-->
+        <!--*********************Save/Add Buttons Section Begin***********************-->
+        <StackLayout Padding="15">
+            <Grid>
+                <Button Text="Cancel"
+                        TextColor="White"
+                        FontSize="Medium"
+                        x:Name="CancelButton"
+                        Padding="25"
+                        BackgroundColor="#BBBBBB"
+                        HorizontalOptions="CenterAndExpand"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+                <Button Text="Save"
+                        TextColor="White"
+                        FontSize="Medium"
+                        x:Name="SaveWindowButton"
+                        Padding="25"
+                        BackgroundColor="#BBBBBB"
+                        HorizontalOptions="CenterAndExpand"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    <!--*********************Save/Add Details Section End***********************-->
+    </StackLayout>
+    <!--Overall StackView End-->
+</ContentPage>

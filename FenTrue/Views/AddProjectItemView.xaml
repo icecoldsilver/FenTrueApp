@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:FenTrue.Views"
+            BackgroundColor="#3D3D3D"
+            BarTextColor="White"
+            BarBackgroundColor="#3D3D3D"
+            x:Class="FenTrue.Views.AddProjectItemView">
+    <!--Pages can be added as references or inline-->
+    
+    <!--<local:AddPocketWindowView Title="Windows">
+        
+    </local:AddPocketWindowView>-->
+    
+    <ContentPage Title="Doors" />
+    <ContentPage Title="Materials" />
+</TabbedPage>

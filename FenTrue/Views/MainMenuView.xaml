@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FenTrue.MarkupExtensions"
+             BackgroundColor="#3D3D3D"
+             
+             x:Class="FenTrue.Views.MainMenuView">
+    
+    <StackLayout>
+        <BoxView Margin="0,50,0,0" HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <Label Text="Main Menu"
+               TextColor="White"
+               FontSize="Title"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+        <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <ScrollView>
+        <StackLayout Padding="50">
+            <StackLayout Margin="0,0,0,10">
+            <Frame BackgroundColor="#848484" >
+            <Grid 
+                  Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Image Source="{local:EmbeddedImage FenTrue.Images.createProjectCardImage.jpg}"
+                       Aspect="AspectFill"
+                       WidthRequest="150"
+                       HeightRequest="100"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"/>
+                <StackLayout Grid.Row="1"
+                             Spacing="1"
+                             Grid.ColumnSpan="2"
+                             Padding="5">
+                    
+                    <Label Text="Create New Project"
+                           TextColor="White"
+                           FontSize="25"
+                           Margin="0"
+                           HorizontalOptions="CenterAndExpand"
+                           />
+                    <Label Text="Create a new project for your windows and doors."
+                           TextColor="White"
+                           Padding="0,0,0,30"
+                           Margin="0"
+                           FontSize="12"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="CenterAndExpand"
+                           />
+                    <Button Text="Create"
+                            x:Name="CreateProjectButton"
+                            Clicked="Handle_NewProject_Clicked"
+                            CornerRadius="15"
+                            BackgroundColor="#3D3D3D"
+                            BorderColor="#3D3D3D"
+                            Visual="Material"
+                            TextColor="White"/>
+                </StackLayout>
+            </Grid>
+            </Frame>
+            </StackLayout>
+            <Frame BackgroundColor="#848484">
+            <StackLayout>
+            <Grid BackgroundColor="#848484" Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Source="{local:EmbeddedImage FenTrue.Images.viewProjectCardImage.jpg}"
+                       Aspect="AspectFill"
+                       WidthRequest="150"
+                       HeightRequest="100"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"/>
+                <StackLayout Grid.Row="1"
+                             Spacing="1"
+                             Grid.ColumnSpan="2"
+                             Padding="10">
+                    
+                    <Label Text="View Projects"
+                           TextColor="White"
+                           Margin="0"
+                           FontSize="25"
+                           HorizontalOptions="CenterAndExpand"
+                           />
+                    <Label Text="View and Edit existing projects."
+                           TextColor="White"
+                           Margin="0"
+                           Padding="0,0,0,30"
+                           FontSize="12"
+                           HorizontalOptions="CenterAndExpand"
+                           />
+                    <Button Text="View"
+                            x:Name="ViewProjectButton"
+                            Clicked="Handle_ViewProjects_Clicked"
+                            CornerRadius="15"
+                            BackgroundColor="#3D3D3D"
+                            BorderColor="#3D3D3D"
+                            Visual="Material"
+                            TextColor="White"/>
+                </StackLayout>
+            </Grid>
+            </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

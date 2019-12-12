@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:FenTrue.MarkupExtensions"
+             BackgroundColor="#3D3D3D"
+             mc:Ignorable="d" x:Class="FenTrue.MainPage">
+    <StackLayout>
+        <BoxView Margin="0,50,0,0" HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <Label Text="Welcome to FenTrue"
+               TextColor="White"
+               FontSize="Title"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+        <BoxView HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 BackgroundColor="#BBBBBB"/>
+        <Image
+            Source="{local:EmbeddedImage FenTrue.Images.FenTrue_Logo@2x.png}"
+            HorizontalOptions="Center"
+            x:Name="logo"
+            Scale="0"
+            Opacity="0"
+            VerticalOptions="StartAndExpand">
+          
+        </Image>
+        <Entry Placeholder="Username" PlaceholderColor="#BBBBBB" VerticalOptions="Start"/>
+        <Entry Placeholder="Password" PlaceholderColor="#BBBBBB" VerticalOptions="Start"/>
+        <Button Text="Login"
+                x:Name="LoginButton"
+                Margin="0,0,0,30"
+                BackgroundColor="#BBBBBB"
+                TextColor="White"
+                FontSize="Body"
+                Clicked="Handle_Clicked"
+                VerticalOptions="StartAndExpand"/>
+    </StackLayout>
+</ContentPage>
